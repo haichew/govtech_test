@@ -1,0 +1,6 @@
+# getting base image
+
+FROM postgres
+RUN mkdir/sql
+COPY src/main/resources/sql_scripts/* /sql/
+RUN psql -f /sql/section_2.sql
